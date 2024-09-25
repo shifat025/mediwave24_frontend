@@ -13,384 +13,41 @@
     <title>Doctor Registration</title>
   </head>
 
-  <body class="bg-blue-300">
-    <div class="flex items-center justify-center min-h-screen">
-      <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-2xl">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8 bg-white">
-          Doctor Registration
-        </h2>
-        <form action="/register" method="POST">
-          <!-- Title Field -->
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <select
-                id="title"
-                name="title"
-                required
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              >
-                <option value="" selected hidden>Title</option>
-                <option value="Dr.">Dr.</option>
-                <option value="Prof. Dr.">Prof. Dr.</option>
-                <option value="Assoc. Prof. Dr.">Assoc. Prof. Dr.</option>
-                <option value="Asst. Prof. Dr.">Asst. Prof. Dr.</option>
-              </select>
-              <label
-                for="title"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Title <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- First Name and Last Name -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            <div class="relative">
-              <input
-                type="text"
-                name="first_name"
-                id="first_name"
-                required
-                autocomplete="off"  
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="first_name"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                First Name <span class="text-red-500">*</span>
-              </label>
-            </div>
-            <div class="relative">
-              <input
-                type="text"
-                name="last_name"
-                id="last_name"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="last_name"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Last Name <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Date of Birth and Gender -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            <div class="relative">
-              <input
-                type="date"
-                name="date_of_birth"
-                id="date_of_birth"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="date_of_birth"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Date of Birth <span class="text-red-500">*</span>
-              </label>
-            </div>
-            <div class="relative">
-              <select
-                id="gender"
-                name="gender"
-                required
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              >
-                <option value="" selected hidden>Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Others">Others</option>
-              </select>
-              <label
-                for="gender"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Gender <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="email"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Email <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Phone Number -->
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <input
-                type="tel"
-                name="mobile_number"
-                id="mobile_number"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="mobile_number"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Phone Number <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <select
-                id="district"
-                name="district"
-                required
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              >
-                <option value="" selected hidden></option>
-                <option value="Dhaka">Dhaka</option>
-                <option value="Bagerhat">Bagerhat</option>
-                <option value="Bandarban">Bandarban</option>
-                <option value="Barguna">Barguna</option>
-                <option value="Barisal">Barisal</option>
-                <option value="Bhola">Bhola</option>
-                <option value="Bogura">Bogura</option>
-                <option value="Brahmanbaria">Brahmanbaria</option>
-                <option value="Chandpur">Chandpur</option>
-                <option value="Chapainawabganj">Chapainawabganj</option>
-                <option value="Chittagong">Chittagong</option>
-                <option value="Chuadanga">Chuadanga</option>
-                <option value="Comilla">Comilla</option>
-                <option value="Cox's Bazar">Cox's Bazar</option>
-                <option value="Dinajpur">Dinajpur</option>
-                <option value="Faridpur">Faridpur</option>
-                <option value="Feni">Feni</option>
-                <option value="Gaibandha">Gaibandha</option>
-                <option value="Gazipur">Gazipur</option>
-                <option value="Gopalganj">Gopalganj</option>
-                <option value="Habiganj">Habiganj</option>
-                <option value="Jamalpur">Jamalpur</option>
-                <option value="Jessore">Jessore</option>
-                <option value="Jhalokati">Jhalokati</option>
-                <option value="Jhenaidah">Jhenaidah</option>
-                <option value="Joypurhat">Joypurhat</option>
-                <option value="Khagrachari">Khagrachari</option>
-                <option value="Khulna">Khulna</option>
-                <option value="Kishoreganj">Kishoreganj</option>
-                <option value="Kurigram">Kurigram</option>
-                <option value="Kushtia">Kushtia</option>
-                <option value="Lakshmipur">Lakshmipur</option>
-                <option value="Lalmonirhat">Lalmonirhat</option>
-                <option value="Madaripur">Madaripur</option>
-                <option value="Magura">Magura</option>
-                <option value="Manikganj">Manikganj</option>
-                <option value="Maulvibazar">Maulvibazar</option>
-                <option value="Meherpur">Meherpur</option>
-                <option value="Munshiganj">Munshiganj</option>
-                <option value="Mymensingh">Mymensingh</option>
-                <option value="Naogaon">Naogaon</option>
-                <option value="Narail">Narail</option>
-                <option value="Narayanganj">Narayanganj</option>
-                <option value="Narsingdi">Narsingdi</option>
-                <option value="Natore">Natore</option>
-                <option value="Netrokona">Netrokona</option>
-                <option value="Nilphamari">Nilphamari</option>
-                <option value="Noakhali">Noakhali</option>
-                <option value="Pabna">Pabna</option>
-                <option value="Panchagarh">Panchagarh</option>
-                <option value="Patuakhali">Patuakhali</option>
-                <option value="Pirojpur">Pirojpur</option>
-                <option value="Rajbari">Rajbari</option>
-                <option value="Rajshahi">Rajshahi</option>
-                <option value="Rangamati">Rangamati</option>
-                <option value="Rangpur">Rangpur</option>
-                <option value="Satkhira">Satkhira</option>
-                <option value="Shariatpur">Shariatpur</option>
-                <option value="Sherpur">Sherpur</option>
-                <option value="Sirajgonj">Sirajgonj</option>
-                <option value="Sunamganj">Sunamganj</option>
-                <option value="Sylhet">Sylhet</option>
-                <option value="Tangail">Tangail</option>
-                <option value="Thakurgaon">Thakurgaon</option>
-              </select>
-              <label
-                for="district"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                District <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- NID/Passport -->
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <input
-                type="text"
-                name="nid_passport"
-                id="nid_passport"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="nid_passport"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                NID/Passport <span class="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            <div class="relative">
-              <input
-                type="text"
-                name="registration_number"
-                id="registration_number"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="registration_number"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Doctor Registration Number <span class="text-red-500">*</span>
-              </label>
-            </div>
-            <div>
+  <body class="">
+    <div class="min-h-screen flex justify-center items-center lg:bg-gradient-to-r lg:from-[#34D2CA]/50 lg:via-white/50 lg:to-white/50">
+      <div class="container flex justify-between items-center  flex-col lg:flex-row">
+        <!-- Image Section -->
+        <div class="hidden lg:flex items-center w-[60%] ">
+          <img class="w-[88%]" src="images/141.png" alt="Doctor Image">
+        </div>
+    
+        <!-- Registration Form -->
+        <div class="bg-white p-8 w-full lg:w-[40%] max-w-2xl">
+          <h2 class="text-3xl font-bold text-center text-[#34D2CA] mb-8 bg-white">
+            Doctor Registration
+          </h2>
+          <form action="/register" method="POST"></form>
+            <!-- Title Field -->
+            <div class="grid grid-cols-1 mb-4">
               <div class="relative">
                 <select
-                  id="doctor_type"
-                  name="doctor_type"
+                  id="title"
+                  name="title"
                   required
-                  autocomplete="off"
-                  class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
                   style="outline: none"
                   onfocus="this.classList.add('filled')"
                   oninput="this.classList.add('filled')"
                   onblur="if(!this.value) this.classList.remove('filled')"
                 >
-                  <option value="" selected hidden>Doctor Type</option>
-                  <option value="General Practitioner">
-                    General Practitioner
-                  </option>
-                  <option value="Specialist">Specialist</option>
-                  <option value="Surgeon">Surgeon</option>
+                  <option value="" selected hidden>Title</option>
+                  <option value="Dr.">Dr.</option>
+                  <option value="Prof. Dr.">Prof. Dr.</option>
+                  <option value="Assoc. Prof. Dr.">Assoc. Prof. Dr.</option>
+                  <option value="Asst. Prof. Dr.">Asst. Prof. Dr.</option>
                 </select>
                 <label
-                  for="doctor_type"
+                  for="title"
                   class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
                   style="
                     background-color: white;
@@ -398,79 +55,431 @@
                     transform: translateY(-50%);
                   "
                 >
-                  Doctor Type <span class="text-red-500">*</span>
+                  Title <span class="text-red-500">*</span>
                 </label>
               </div>
             </div>
-          </div>
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="password"
-                class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Password <span class="text-red-500">*</span>
-              </label>
+  
+            <!-- First Name and Last Name -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  required
+                  autocomplete="off"  
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="first_name"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  First Name <span class="text-red-500">*</span>
+                </label>
+              </div>
+              <div class="relative">
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="last_name"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Last Name <span class="text-red-500">*</span>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="grid grid-cols-1 mb-4">
-            <div class="relative">
-              <input
-                type="password"
-                name="confirm_password"
-                id="confirm_password"
-                required
-                autocomplete="off"
-                class="mt-1 block w-full border border-gray-300 rounded-lg p-3 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
-                style="outline: none"
-                onfocus="this.classList.add('filled')"
-                oninput="this.classList.add('filled')"
-                onblur="if(!this.value) this.classList.remove('filled')"
-              />
-              <label
-                for="confirm_password"
-                class="absolute left-3  top-1/2 transform transition-all duration-200 ease-in-out"
-                style="
-                  background-color: white;
-                  color: #2c52a0;
-                  transform: translateY(-50%);
-                "
-              >
-                Confirm Password <span class="text-red-500">*</span>
-              </label>
+  
+            <!-- Date of Birth and Gender -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div class="relative">
+                <input
+                  type="date"
+                  name="date_of_birth"
+                  id="date_of_birth"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="date_of_birth"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Date of Birth <span class="text-red-500">*</span>
+                </label>
+              </div>
+              <div class="relative">
+                <select
+                  id="gender"
+                  name="gender"
+                  required
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                >
+                  <option value="" selected hidden>Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+                <label
+                  for="gender"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Gender <span class="text-red-500">*</span>
+                </label>
+              </div>
             </div>
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200"
-          >
-            Register
-          </button>
-        </form>
-        <p class="text-center text-gray-500 mt-4">
-          Already have an account?
-          <a href="/login.html" class="text-blue-600 hover:underline"
-            >Login here</a
-          >
-        </p>
+  
+            <!-- Email -->
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="email"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Email <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+  
+            <!-- Phone Number -->
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <input
+                  type="tel"
+                  name="mobile_number"
+                  id="mobile_number"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="mobile_number"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Phone Number <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <select
+                  id="district"
+                  name="district"
+                  required
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                >
+                  <option value="" selected hidden></option>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Bagerhat">Bagerhat</option>
+                  <option value="Bandarban">Bandarban</option>
+                  <option value="Barguna">Barguna</option>
+                  <option value="Barisal">Barisal</option>
+                  <option value="Bhola">Bhola</option>
+                  <option value="Bogura">Bogura</option>
+                  <option value="Brahmanbaria">Brahmanbaria</option>
+                  <option value="Chandpur">Chandpur</option>
+                  <option value="Chapainawabganj">Chapainawabganj</option>
+                  <option value="Chittagong">Chittagong</option>
+                  <option value="Chuadanga">Chuadanga</option>
+                  <option value="Comilla">Comilla</option>
+                  <option value="Cox's Bazar">Cox's Bazar</option>
+                  <option value="Dinajpur">Dinajpur</option>
+                  <option value="Faridpur">Faridpur</option>
+                  <option value="Feni">Feni</option>
+                  <option value="Gaibandha">Gaibandha</option>
+                  <option value="Gazipur">Gazipur</option>
+                  <option value="Gopalganj">Gopalganj</option>
+                  <option value="Habiganj">Habiganj</option>
+                  <option value="Jamalpur">Jamalpur</option>
+                  <option value="Jessore">Jessore</option>
+                  <option value="Jhalokati">Jhalokati</option>
+                  <option value="Jhenaidah">Jhenaidah</option>
+                  <option value="Joypurhat">Joypurhat</option>
+                  <option value="Khagrachari">Khagrachari</option>
+                  <option value="Khulna">Khulna</option>
+                  <option value="Kishoreganj">Kishoreganj</option>
+                  <option value="Kurigram">Kurigram</option>
+                  <option value="Kushtia">Kushtia</option>
+                  <option value="Lakshmipur">Lakshmipur</option>
+                  <option value="Lalmonirhat">Lalmonirhat</option>
+                  <option value="Madaripur">Madaripur</option>
+                  <option value="Magura">Magura</option>
+                  <option value="Manikganj">Manikganj</option>
+                  <option value="Maulvibazar">Maulvibazar</option>
+                  <option value="Meherpur">Meherpur</option>
+                  <option value="Munshiganj">Munshiganj</option>
+                  <option value="Mymensingh">Mymensingh</option>
+                  <option value="Naogaon">Naogaon</option>
+                  <option value="Narail">Narail</option>
+                  <option value="Narayanganj">Narayanganj</option>
+                  <option value="Narsingdi">Narsingdi</option>
+                  <option value="Natore">Natore</option>
+                  <option value="Netrokona">Netrokona</option>
+                  <option value="Nilphamari">Nilphamari</option>
+                  <option value="Noakhali">Noakhali</option>
+                  <option value="Pabna">Pabna</option>
+                  <option value="Panchagarh">Panchagarh</option>
+                  <option value="Patuakhali">Patuakhali</option>
+                  <option value="Pirojpur">Pirojpur</option>
+                  <option value="Rajbari">Rajbari</option>
+                  <option value="Rajshahi">Rajshahi</option>
+                  <option value="Rangamati">Rangamati</option>
+                  <option value="Rangpur">Rangpur</option>
+                  <option value="Satkhira">Satkhira</option>
+                  <option value="Shariatpur">Shariatpur</option>
+                  <option value="Sherpur">Sherpur</option>
+                  <option value="Sirajgonj">Sirajgonj</option>
+                  <option value="Sunamganj">Sunamganj</option>
+                  <option value="Sylhet">Sylhet</option>
+                  <option value="Tangail">Tangail</option>
+                  <option value="Thakurgaon">Thakurgaon</option>
+                </select>
+                <label
+                  for="district"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  District <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+  
+            <!-- NID/Passport -->
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="nid_passport"
+                  id="nid_passport"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="nid_passport"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  NID/Passport <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="registration_number"
+                  id="registration_number"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="registration_number"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Doctor Registration Number <span class="text-red-500">*</span>
+                </label>
+              </div>
+              <div>
+                <div class="relative">
+                  <select
+                    id="doctor_type"
+                    name="doctor_type"
+                    required
+                    autocomplete="off"
+                    class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                    style="outline: none"
+                    onfocus="this.classList.add('filled')"
+                    oninput="this.classList.add('filled')"
+                    onblur="if(!this.value) this.classList.remove('filled')"
+                  >
+                    <option value="" selected hidden>Doctor Type</option>
+                    <option value="General Practitioner">
+                      General Practitioner
+                    </option>
+                    <option value="Specialist">Specialist</option>
+                    <option value="Surgeon">Surgeon</option>
+                  </select>
+                  <label
+                    for="doctor_type"
+                    class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                    style="
+                      background-color: white;
+                      color: #2c52a0;
+                      transform: translateY(-50%);
+                    "
+                  >
+                    Doctor Type <span class="text-red-500">*</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="password"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Password <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 mb-4">
+              <div class="relative">
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-2 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="confirm_password"
+                  class="absolute left-3  top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Confirm Password <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-[#34D2CA] text-black font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200"
+            >
+              Register
+            </button>
+          </form>
+          <!-- Login Redirect Text -->
+          <p class="text-center text-gray-500 mt-4">
+            Already have an account?
+            <a href="/login.html" class="text-blue-600 hover:underline">Login here</a>
+          </p>
+        </div>
       </div>
     </div>
+    
   </body>
 </html>
+
