@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.anton-regular {
+    font-family: "Anton", system-ui;
+  }
+
+  .font-poppins{
+    font-family: "Poppins", sans-serif;
+}
+.oswald {
+    font-family: "Oswald", sans-serif;
+    
+  }
+
+
+ /* Center label vertically when input is empty */
+ label {
+  top: 50%; /* Center the label vertically */
+  transform: translateY(-50%); /* Center adjustment */
+  transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* Move label to top when input is filled */
+.filled + label {
+  top: 2px; /* Fixed top position */
+  left: 0.75rem; /* Fixed left position */
+  font-size: 0.75rem; /* Small font size */
+  color: #2c52a0; /* Custom label color */
+}
+
+/* Keep label at top when input is focused */
+.peer:focus + label {
+  top: 0; /* Keep label at top */
+  left: 0.75rem; /* Keep label at left */
+  font-size: 0.75rem; /* Keep small font size */
+}

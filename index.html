@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">  <!-- Set the theme to "light" here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <nav class="">
+        <div class="navbar fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+            <div class="flex-1 ml-32 gap-10">
+              <a class="text-xl ">daisyUI</a>
+              <h1 class="text-xl">For Doctors</h1>
+            </div>
+            <div class="flex-none gap-10 mr-32">
+                <a class="text-xl " href="doctor_registration.html">Signup</a>
+                <a class="text-xl " href="login.html">Login</a>
+            </div>
+            <div class="flex-none gap-2 mr-32 hidden">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+    </nav>
+    <!-- Banner Start -->
+    <section class="h-screen relative pt-16">
+        <img class="w-full h-[90%]" src="images/Banner.jpg" alt="">
+        <div class="absolute top-1/3 left-32 pl-3 transform -translate-y-1/2 text-white ">
+            <hr class="w-12 border-2 border-green-300 mb-3">
+            <h1 class="text-2xl md:text-3xl opacity-80 pb-2">Total Health Care Solution</h1>
+            <h1 class="text-4xl md:text-6xl font-bold pb-2">Your Most Trusted <br> Health Partner</h1>
+            <h3 class="mt-4 pb-4 text-sm md:text-lg">At Medivae24, we make healthcare easy for you. <br> Book appointments with doctors and get help whenever you need it, 24/7. <br> Your health is always our focus.</h3>
+            <button class="px-4 py-2 mt-4 bg-green-500 text-white font-semibold rounded-md">Appointment</button>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-5 absolute bottom-28 left-1/2 transform -translate-x-1/2 opacity-70">
+            <!-- First Card -->
+            <div class="card bg-base-100 w-full md:w-96 shadow-xl">
+                <div class="card-body p-5">
+                  <i class="fa-solid fa-user-doctor text-4xl text-green-500 mb-3"></i>
+                    <h3 class="text-lg font-semibold ">Anytime Available</h3>
+                    <h1 class="card-title text-2xl md:text-3xl font-bold">Qualified Doctors</h1>
+                    <p class="font-semibold">Experienced and skilled doctors providing top-quality care, personalized treatment, and expert medical advice to ensure your health and well-being.</p>
+                </div>
+            </div>
+        
+            <!-- Second Card -->
+            <div class="card bg-base-100 w-full md:w-96 shadow-xl">
+                <div class="card-body p-5">
+                  <i class="fa-solid fa-user-doctor text-4xl text-green-500 mb-3"></i>
+                    <h4 class="text-lg font-semibold">24 hours service</h4>
+                    <h2 class="card-title text-2xl md:text-3xl font-bold">Online Appointment</h2>
+                    <p class="font-semibold">Book a doctor’s appointment quickly and easily from anywhere. Simple, fast, and always available for your healthcare needs. Get the care you deserve without the hassle.</p>
+                </div>
+            </div>
+        
+            <!-- Third Card -->
+            <div class="card bg-base-100 w-full md:w-96 shadow-xl">
+                <div class="card-body p-5">
+                  <i class="fa-solid fa-user-doctor text-4xl text-green-500 mb-3"></i>
+                    <h3 class="text-lg font-semibold">Service</h3>
+                    <h2 class="card-title text-2xl md:text-3xl font-bold">24/7 Services</h2>
+                    <p class="font-semibold">Get healthcare support anytime, day or night. Our services are available 24 hours a day, 7 days a week, ensuring you're never without care when you need it most.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    <!-- Banner End -->
+     
+    <!-- when use mediwave24 start -->
+    <!-- <section>
+        <div class="flex m-36 ">
+            <div class="flex-1 flex justify-center items-center w-[50%] ">
+                <img class="w-4/5 " src="images/headec.png" alt="">
+            </div>
+            <div class="flex-1 w-[50%]">
+                <h1 class="text-5xl font-semibold pb-10 font-poppins">When to use Mediwave24</h1>
+                <div class="pt-10 pb-10">
+                    <h1 class="text-3xl pb-4 font-poppins font-medium">Common health issue</h1>
+                    <h3 class="font-poppins text-justify">Ask anyting you would normally ask your Gp. You can have an instant video with one of our GPs via a digital consultaion from anywhere, at any time of day</h3>
+                </div>
+                <div class="pt-10 pb-10">
+                    <h1 class="text-3xl pb-4 font-poppins font-medium">Specialist advice</h1>
+                    <h3 class="font-poppins text-justify">Sometimes its helpful to see a specialist when you want. For gynaecology, child specialists,dermatology, cardiology,gastroenterology, nutrition, chronic diseases such as hypertension,or other conditons, Mediwave24 can help you to connect with right specialist doctor and to stay healthy. More than 20 different specialities are available on Mediwave24.</h3>
+
+                </div>
+                <div class="pt-10 pb-10 ">
+                    <h1 class="text-3xl pb-4 font-poppins font-medium">Mental health and wellbeing</h1>
+                    <h3 class="font-poppins text-justify">In a fast paced world, it is important to monitor and protect your  mental health and wellbeing.Docotors can help you stay healthy whether you have symptoms at home or in your workplace of stress, smoking,anxiety, bereavement of depression</h3>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="py-10 md:py-24 m-36">
+        <div class="adjust:container">
+            <div class="grid grid-cols-2 gap-6 xl:gap-12">
+                <div></div>
+                <div class="hidden lg:block">
+                    <h2 class="text-center text-2xl pb-10 font-poppins-bold font-extrabold leading-10 sm:text-left md:pb-16 md:text-3xl xl:text-5xl 2xl:pb-16 2xl:text-55xl">
+                        When to use Mediwave24
+                    </h2>
+                </div>
+            </div>
+    
+            <div class="grid gap-6 lg:grid-cols-2 xl:gap-12">
+                <div class="mx-auto max-w-sm sm:max-w-xl xl:ml-0 xl:max-w-4xl">
+                    <img src="images/headec.png" loading="lazy" width="100%" height="100%" alt="head_pain">
+                </div>
+                <div class="sm:py-10 lg:hidden">
+                    <h2 class="ttext-center font-poppins-bold text-2xl font-extrabold leading-10 md:text-3xl lg:text-left xl:text-5xl 2xl:text-55xl">
+                        When to use <span class="text-blue-500">Mediwave24</span>
+                    </h2>
+                </div>
+                <div>
+                    <div class="flex flex-col justify-around space-y-10 xl:h-full">
+                        <div class="mx-auto max-w-sm sm:max-w-xl xl:ml-0 xl:max-w-4xl">
+                            <h6 class="ttext-center ttext-lg tpb-3 font-poppins font-semibold text-[#0C0B52] sm:text-left sm:text-xl 2xl:text-2xl">
+                                Common health issue
+                            </h6>
+                            <p class="ttext-center sm:ttext-lg font-poppins text-sm text-light-gray sm:text-left lg:text-[15px] xl:text-xl">
+                                Ask anything you would normally ask your GP. You can have an instant video consultation with one of our GPs from anywhere, at any time of day.
+                            </p>
+                        </div>
+                        <div class="mx-auto max-w-sm sm:max-w-xl xl:ml-0 xl:max-w-4xl">
+                            <h6 class="ttext-center ttext-lg tpb-3 font-poppins font-semibold text-[#0C0B52] sm:text-left sm:text-xl 2xl:text-2xl">
+                                Specialist advice
+                            </h6>
+                            <p class="ttext-center sm:ttext-lg font-poppins text-sm text-light-gray sm:text-left lg:text-[15px] xl:text-xl">
+                                Sometimes it’s helpful to see a specialist when you want. For gynaecology, child specialists, dermatology, cardiology, gastroenterology, nutrition, chronic diseases such as hypertension, or other conditions, Mediwave24 can help you connect with the right specialist doctor to stay healthy. More than 20 different specialities are available on Mediwave.
+                            </p>
+                        </div>
+                        <div class="mx-auto max-w-sm sm:max-w-xl xl:ml-0 xl:max-w-4xl">
+                            <h6 class="ttext-center ttext-lg tpb-3 font-poppins font-semibold text-[#0C0B52] sm:text-left sm:text-xl 2xl:text-2xl">
+                                Mental health and wellbeing
+                            </h6>
+                            <p class="ttext-center sm:ttext-lg font-poppins text-sm text-light-gray sm:text-left lg:text-[15px] xl:text-xl">
+                                In a fast-paced world, it is important to monitor and protect your mental health and wellbeing. Doctors can help you stay healthy whether you have symptoms of stress, smoking, anxiety, bereavement, or depression at home or in your workplace.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- when use mediwave24 end -->
+
+    <!-- Get medical help start -->
+    <!-- <section class="ml-36 pt-20 ">
+        <h2 class="text-3xl pb-3 ">Get medical help</h2>
+        <h1 class="text-6xl font-bold font-poppins">Just in few taps!</h1>
+        <div class="flex ">
+            <div class="flex gap-2 m-4">
+                <div class="max-w-xs rounded overflow-hidden mt-6 p-4 pl-0">
+                    <img class="pb-4" src="images/soccer.svg" alt="">
+                    <h1 class="pb-6 font-poppins">Easy to use</h1>
+                    <p class="font-poppins  text-xl pb-4">Get the best user experience on Mediwave24. Search for a doctor
+                     and get an instant consultaion.
+                    </p>
+                    <p class="font-poppins  text-xl">You can join the online queue immediately, while you can continue doing other tasks at home or office.</p>
+                    
+                </div>
+                <div class="max-w-xs rounded overflow-hidden mt-6 p-3 m-3">
+                    <img class="pb-4" src="images/hours.svg" alt="">
+                    <h1 class="pb-6 font-poppins">Anytime</h1>
+                    <p class="font-poppins  text-xl">
+                        Talk to a doctor within minutes. Our qualified network of doctors is available 24/7. You can get a consultation and prescription whenever you need. Patients and doctors can keep their previous consultation history and view online prescriptions.
+                    </p>
+                    
+                </div>
+                <div class="max-w-xs rounded overflow-hidden mt-6 p-2">
+                    <img class="pb-2" src="images/shield.svg" alt="">
+                    <h1 class="pb-6 font-poppins">Trusted</h1>
+                    <p class="font-poppins  text-xl">Mediwave24 experience doctors, specialists  and therapists are selected carefully. Safety and quality is at the heart of everything
+                        we do.each doctor is certified, registered, and operates to the highest clinical standards.
+                        Mediwave24 uses 256 bit encryption to secure the video consultaion.
+                    </p>
+                </div>
+                
+            </div>
+            <div>
+                <img class="w-[90%] ml-3 flex justify-center items-center" src="images/nilima.webp" alt="">
+            </div>
+        </div>
+    </section> -->
+    <section class="py-10 md:py-24 m-36">
+        <div class="">
+            <p class="text-center text-2xl pb-2 font-poppins mb-0 text-light-gray sm:text-left md:pb-5">Get medical help</p>
+            <h2 class="text-center text-2xl pb-10 font-poppins-bold font-extrabold leading-10 sm:text-left md:pb-24 md:text-3xl xl:text-5xl 2xl:pb-2 2xl:text-5xl">
+                Just in a few taps!
+            </h2>
+            <div class="grid items-center gap-4 xl:grid-cols-12">
+                <div class="col-span-8 grid grid-cols-1 gap-5 space-y-6 md:grid-cols-2 lg:grid-cols-3 lg:space-y-0">
+                    <div class="max-w-xs sm:ml-0">
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="images/soccer.svg" loading="lazy" alt="Easy to use" class="mb-3 h-12 w-12">
+                        </div>
+                        <h4 class="font-avatar text-center pb-4 text-xl font-semibold text-blue-500 sm:text-left">Easy to use</h4>
+                        <p class="text-md text-center font-poppins pb-3 text-light-gray sm:text-left 2xl:text-lg">
+                            Get the best user experience on Mediwave24 App. Search for a doctor and get an instant consultation.
+                        </p>
+                        <p class="text-md text-center font-poppins text-light-gray sm:text-left 2xl:text-lg">
+                            You can join the online queue immediately while continuing to do other tasks at home or the office.
+                        </p>
+                    </div>
+                    <div class="max-w-xs sm:ml-0">
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="images/hours.svg" loading="lazy" alt="AnyTime" class="mb-3 h-12 w-12">
+                        </div>
+                        <h4 class="font-avatar text-center pb-4 text-xl font-semibold text-blue-500 sm:text-left">AnyTime</h4>
+                        <p class="text-md text-center font-poppins pb-3 text-light-gray sm:text-left 2xl:text-lg">
+                            Talk to a doctor within minutes. Our qualified network of doctors is available 24/7. You can get a consultation and prescription whenever you need. Patients and doctors can keep their previous consultation history and view online prescriptions.
+                        </p>
+                    </div>
+                    <div class="max-w-xs sm:ml-0">
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="images/shield.svg" loading="lazy" alt="Trusted" class="mb-3 h-12 w-12">
+                        </div>
+                        <h4 class="font-avatar text-center pb-4 text-xl font-semibold text-blue-500 sm:text-left">Trusted</h4>
+                        <p class="text-md text-center font-poppins pb-3 text-light-gray sm:text-left 2xl:text-lg">
+                            Mediwave24's experienced doctors, specialists, and therapists are selected carefully. Safety and quality are at the heart of everything we do. Each doctor is certified, registered, and operates to the highest clinical standards. Mediwave24 uses 256-bit encryption to secure video consultations.
+                        </p>
+                    </div>
+                </div>
+                <div class="aspect-w-3 aspect-h-3 col-span-4 hidden xl:block">
+                    <img src="images/nilima.webp" loading="lazy" alt="Nilima" class="object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Get medical help start -->
+
+    <!-- Main services start-->
+    <!-- <section class="m-36">
+        <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class=" flex-1 text-center md:text-left ml-8">
+                <h1 class="text-6xl pb-12 font-poppins font-bold">Main Mediwave24 Services</h1>
+                <div class="pr-52">
+                    <h2 class="text-2xl pb-10">Mediwave24 is an end-to-end health solution that enables better health and well-being through advanced technology.</h2>
+                    <h2 class="text-2xl">Mediwave24 offers several services, including healthcare and protection subscription packages, certified and verified GP and specialist consultations (80% of our patients wait less than 10 minutes to be connected to a doctor), 
+                    online prescriptions, medicine delivery, and integrated tests and diagnostics. Our secure technology provides affordable access to healthcare for all.</h2>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-6 md:mt-0 pb-28">
+                <img class="w-[80%] " src="images/man_uncomfird.webp" alt="">
+            </div>
+        </div>
+    </section> -->
+    <section class="pb-10 pt-12 md:pb-24 xl:pt-0 mx-44">
+        <div class="flex flex-col-reverse items-center justify-center lg:flex-row lg:justify-between">
+          <div>
+            <h2 class="text-center pb-5 text-2xl font-bold leading-10 md:pb-10 md:text-3xl lg:text-left xl:text-6xl">
+              Main Mediwave24 Services
+            </h2>
+            <div class="mx-auto max-w-xl lg:ml-0">
+              <p class="text-center text-sm pb-5 text-light-gray sm:text-lg md:pb-8 md:text-xl lg:text-left">
+                Mediwave24 is an end-to-end health solution that enables better health and wellbeing with advanced technology.
+              </p>
+              <p class="text-center text-sm text-light-gray sm:text-lg md:text-xl lg:text-left">
+                Mediwave24 offers several services including healthcare and protection subscription packages, certified and verified GP and specialist consultations (80% of our patients wait less than 10 minutes to be connected to a doctor), online prescriptions, medicine delivery, and integrated tests and diagnostics. Our secure technology gives affordable access to healthcare for all.
+              </p>
+            </div>
+          </div>
+          <div class="w-8/12 pb-12 lg:w-5/12">
+            <img src="images/man_uncomfird.webp"  alt="man uncomfortable">
+          </div>
+        </div>
+      </section>
+      
+      
+    <!-- Main services end -->
+
+    <!-- Available specialist start -->
+    <section class="m-8 sm:m-16 md:m-32 lg:m-56">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold pb-8 md:pb-16">Available Specialties</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">General Physician</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Pediatrics / Child Care</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Gynaecology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Neurology / Brain</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Pulmonology / Lungs</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Nutritionist</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Gastroenterology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Cardiology / Heart</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Ophthalmology / Eye</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Dentistry / Dental Care</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Endocrinology / Diabetes</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Occupational Therapy</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Nephrology / Kidney</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Obstetrics</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">ENT / Ear, Nose and Throat</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Parasitology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Podiatry</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Oncology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Dermatology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Psychological Counselor</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Rheumatology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Urology</h1>
+          </div>
+          <div class="flex gap-3">
+              <i class="fa-solid fa-check text-2xl" style="color: #06c68c;"></i>
+              <h1 class="text-lg sm:text-xl">Chiropractic</h1>
+          </div>
+      </div>
+  </section>
+  
+    <!-- Available specialist end -->
+     
+   
+      <!-- service start -->
+      <section class="m-36">
+        <div class="mx-auto max-w-xl px-4 sm:px-6 md:max-w-xl md:px-8 lg:max-w-7xl">
+          <div class="grid gap-8 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-y-16 ">
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/verified__doctors.svg" loading="lazy" width="100%" height="100%" alt="verified__doctors" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Verified doctors
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Every doctor on Mediwave24 platform is BMDC certified. We verify relevant information before the doctor can consult any patient.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/instant__video__consultation.svg" loading="lazy" width="100%" height="100%" alt="instant video consultation" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Instant video consultation
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Most consultations start within 10 minutes of making a payment. The video call is secured by 256-bit encryption.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/Instant_electronics_prescription.svg" loading="lazy" width="100%" height="100%" alt="instant electronics prescription" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Instant electronic prescription
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  As soon as the consultation is complete, the doctor will provide the electronic prescription for the patient to download instantly or later.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/easy__payment.svg" loading="lazy" width="100%" height="100%" alt="easy payment" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Easy payment options
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Patients can make payments online using our secured payment gateway through bKash, Rocket, Nagad, debit cards, credit cards, and many more.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/better__consultation__quality.svg" loading="lazy" width="100%" height="100%" alt="better consultation quality" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Better consultation quality
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Our doctors are committed to providing the best service by spending enough time for the consultation. We constantly improve our service based on patient feedback and ratings.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/health__history.svg" loading="lazy" width="100%" height="100%" alt="health history" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Health history
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Patients can access their consultation history and previous prescriptions digitally with just a few taps.
+                </p>
+              </div>
+            </div>
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/super__fast__support.svg" loading="lazy" width="100%" height="100%" alt="super fast support" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Super fast support
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Our dedicated customer service team is always available to help resolve any issues or answer queries. We are happy to assist.
+                </p>
+              </div>
+            </div>
+      
+            <!-- <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/medicine__delivered.svg" loading="lazy" width="100%" height="100%" alt="medicine delivery" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Medicine delivered to your doorstep
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  We work closely with our partners to ensure medicines are delivered right to your doorstep.
+                </p>
+              </div>
+            </div> -->
+      
+            <div class="flex w-full items-start">
+              <div class="block h-16 w-16 flex-shrink-0 md:mr-2 md:w-20">
+                <img src="images/mobile__reminder.svg" loading="lazy" width="100%" height="100%" alt="mobile reminder" class="h-12 w-12 md:h-16 md:w-16">
+              </div>
+              <div>
+                <h6 class="font-poppins pb-1 text-lg font-semibold text-[#0C0B52] sm:text-xl md:font-poppins-title 2xl:pb-2">
+                  Medicine reminder
+                </h6>
+                <p class="font-poppins text-xs text-[#3B4966] text-opacity-90 sm:text-sm lg:text-base 2xl:text-[17px]">
+                  Don’t worry about missing your medication. The Mediwave24 App will remind you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+      <!-- service end -->
+   
+      <footer class="pt-40">
+        <div class="py-10" style="background-color: rgb(244,249,253); color: rgb(129, 116, 116);">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Contact Information -->
+                    <div class="contact-info flex flex-col items-center md:items-start pl-16">
+                        <div class="flex items-center mb-2 ">
+                            <img src="" alt="logo" class="w-10 h-10 mr-2 ">
+                            <a href="tel:09677885599" rel="help" class="font-poppins text-base font-medium text-gray-600 hover:text-blue-500">
+                                01787929436
+                            </a>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <span class="mr-2">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <a href="" rel="help" class="font-poppins text-base font-medium text-gray-600 hover:text-blue-500">
+                              mdshifat.official.05@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center ">
+                            <span class="mr-2 text-center">
+                                <i class="fa-solid fa-location-dot pb-10 "></i>
+                            </span>
+                            <p  class="font-poppins leading-8 text-base font-medium text-gray-600 max-w-xs">
+                                2 No. Probal Housing, Ring Road, Mohammadpur, Dhaka.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <!-- Links Section 1 -->
+                    <div class="flex flex-col justify-center items-center pl-16">
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            About us
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            How it works
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            For Doctors
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Courses
+                        </a>
+                        <p class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            <span>
+                                <a href="" class="text-gray-600 hover:text-gray-900">Blog</a> /
+                                <a href="" class="text-gray-600 hover:text-gray-900">ব্লগ</a>
+                            </span>
+                        </p>
+                        <p class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            <span>
+                                <a href="" class="text-gray-600 hover:text-gray-900">Hospital Partners</a>
+                            </span>
+                        </p>
+                    </div>
+    
+                    <!-- Links Section 2 -->
+                    <div class="flex flex-col items-center pl-16">
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Contact Us
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Terms & Conditions
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Data & Research
+                        </a>
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Help
+                        </a>
+                    </div>
+    
+                    <!-- Social Media Links -->
+                    <div class="flex flex-col items-center pl-16">
+                        <a href="" class="font-poppins p-2 text-base font-medium text-gray-600 hover:text-gray-900">
+                            Follow us
+                        </a>
+                        <div class="flex space-x-4 justify-center mt-2">
+                            <a href="https://facebook.com" target="_blank" class="text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-facebook-f text-2xl"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="text-gray-600 hover:text-blue-400">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="text-gray-600 hover:text-blue-700">
+                                <i class="fab fa-linkedin-in text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+</body>
+</html>
