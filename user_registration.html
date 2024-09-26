@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Registration</title>
+  </head>
+
+  <body class="">
+    <div class="min-h-screen flex justify-center items-center lg:bg-gradient-to-r lg:from-[#34D2CA]/50 lg:via-white/50 lg:to-white/50">
+      <div class="container flex justify-between items-center  flex-col lg:flex-row">
+        <!-- Image Section -->
+        <div class="hidden lg:flex items-center w-[60%] ">
+          <img class="w-[85%]" src="images/141.png" alt="Doctor Image">
+        </div>
+    
+        <!-- Registration Form -->
+        <div class="bg-white p-8 w-full lg:w-[40%] max-w-2xl">
+          <h2 class="text-3xl font-bold text-center text-[#34D2CA] mb-8 bg-white">
+            Registration
+          </h2>
+          <form action="/register" method="POST"></form>
+            
+  
+            <!-- First Name  -->
+            <div class="grid grid-cols-1 mb-5">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  required
+                  autocomplete="off"  
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-4 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="first_name"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  First Name <span class="text-red-500">*</span>
+                </label>
+              </div>
+              
+            </div>
+            <div class="grid grid-cols-1 mb-5" >
+                <div class="relative">
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="last_name"
+                      required
+                      autocomplete="off"
+                      class="mt-1 block w-full border border-gray-300 rounded-lg p-4 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                      style="outline: none"
+                      onfocus="this.classList.add('filled')"
+                      oninput="this.classList.add('filled')"
+                      onblur="if(!this.value) this.classList.remove('filled')"
+                    />
+                    <label
+                      for="last_name"
+                      class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                      style="
+                        background-color: white;
+                        color: #2c52a0;
+                        transform: translateY(-50%);
+                      "
+                    >
+                      Last Name <span class="text-red-500">*</span>
+                    </label>
+                  </div>
+            </div>
+  
+            <!-- Email -->
+            <div class="grid grid-cols-1 mb-5">
+              <div class="relative">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-4 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="email"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Email <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="grid grid-cols-1 mb-5">
+              <div class="relative">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-4 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="password"
+                  class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Password <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 mb-5">
+              <div class="relative">
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  required
+                  autocomplete="off"
+                  class="mt-1 block w-full border border-gray-300 rounded-lg p-4 pl-3 transition duration-200 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                  style="outline: none"
+                  onfocus="this.classList.add('filled')"
+                  oninput="this.classList.add('filled')"
+                  onblur="if(!this.value) this.classList.remove('filled')"
+                />
+                <label
+                  for="confirm_password"
+                  class="absolute left-3  top-1/2 transform transition-all duration-200 ease-in-out"
+                  style="
+                    background-color: white;
+                    color: #2c52a0;
+                    transform: translateY(-50%);
+                  "
+                >
+                  Confirm Password <span class="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-[#34D2CA] text-black font-semibold p-3  rounded-md  transition duration-200"
+            >
+              Register
+            </button>
+          </form>
+          <!-- Login Redirect Text -->
+          <p class="text-center text-gray-500 mt-4">
+            Already have an account?
+            <a href="/login.html" class="text-blue-600 hover:underline">Login here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+

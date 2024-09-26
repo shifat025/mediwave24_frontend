@@ -1,30 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Registration</title>
 </head>
+
 <body>
-    <div class="flex items-center justify-center min-h-screen bg-gray-100">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
-            <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
-            <form action="#" method="POST">
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    <div class="min-h-screen flex justify-center items-center bg-gradient-to-br from-teal-100 to-teal-50">
+        <div class="flex flex-col lg:flex-row max-w-5xl mx-auto p-4">
+            <!-- Combined Section -->
+            <div class="flex justify-center items-center w-full lg:w-[90%] mb-8 lg:mb-0 bg-white rounded-lg shadow-lg p-8">
+                <!-- Image Section -->
+                <div class="relative hidden md:flex justify-center items-center w-full lg:w-1/2 mb-6 lg:mb-0">
+                    <img class="w-full h-auto rounded-lg" src="images/stathiscope.png" alt="Doctor Image">
+                
+                    <!-- The rest of the images -->
+                    <img class="absolute pb-56 md:pb-40 lg:pb-56" src="images/capsul-1.png" alt="">
+                    <img class="absolute pb-64 pl-20 md:pb-48 md:pl-12 lg:pb-64 lg:pl-20" src="images/capsul-5.png" alt="">
+                    <img class="absolute pt-40 pl-14 md:pt-28 md:pl-10 lg:pt-40 lg:pl-14" src="images/capsul-2.png" alt="">
+                    <img class="absolute pt-24 pl-14 md:pt-16 md:pl-10 lg:pt-24 lg:pl-14" src="images/capsul-3.png" alt="">
+                    <img class="absolute pt-20 pr-48 md:pt-14 md:pr-32 lg:pt-20 lg:pr-48" src="images/capsul-4.png" alt="">
                 </div>
-                <div class="mb-6">
-                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                
+
+                <!-- Login Form -->
+                <div class="w-full lg:w-1/2 flex flex-col">
+                    <h2 class="text-4xl font-bold text-center text-teal-600 mb-6">Login</h2>
+                    <form action="/login" method="POST" class="w-full">
+                        <!-- Email -->
+                        <div class="mb-5">
+                            <div class="relative">
+                                <input type="email" name="email" id="email" required autocomplete="off"
+                                    class="block w-full border border-gray-300 rounded-lg p-4 pl-3 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                                    onfocus="this.classList.add('filled')" oninput="this.classList.add('filled')"
+                                    onblur="if(!this.value) this.classList.remove('filled')" />
+                                <label for="email" class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                                    style="background-color: white; color: #2c52a0; transform: translateY(-50%); padding: 0 5px;">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-5">
+                            <div class="relative">
+                                <input type="password" name="password" id="password" required autocomplete="off"
+                                    class="block w-full border border-gray-300 rounded-lg p-4 pl-3 focus:border-teal-500 focus:ring focus:ring-teal-200 focus:outline-none shadow-md"
+                                    onfocus="this.classList.add('filled')" oninput="this.classList.add('filled')"
+                                    onblur="if(!this.value) this.classList.remove('filled')" />
+                                <label for="password" class="absolute left-3 top-1/2 transform transition-all duration-200 ease-in-out"
+                                    style="background-color: white; color: #2c52a0; transform: translateY(-50%); padding: 0 5px;">
+                                    Password <span class="text-red-500">*</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-teal-500 text-white font-semibold p-3 rounded-md hover:bg-teal-600 transition duration-200">
+                            Login
+                        </button>
+                    </form>
+
+                    <!-- Login Redirect Text -->
+                    <p class="text-center text-gray-500 mt-4">
+                        Don't have an account?
+                        <a href="/register.html" class="text-blue-600 hover:underline">Register here</a>
+                    </p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
-                    <a href="#" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Forgot Password?</a>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </body>
